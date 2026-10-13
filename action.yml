@@ -1,0 +1,31 @@
+name: 'Gumroad File Upload'
+description: 'Upload release archives to Gumroad and attach them to products'
+author: 'Bill Caffery'
+
+inputs:
+  access-token:
+    description: 'Gumroad API access token'
+    required: true
+  product-id:
+    description: 'Gumroad product identifier or permalink'
+    required: true
+  file-path:
+    description: 'Path to the local file archive to upload'
+    required: true
+  file-name:
+    description: 'Display name for the uploaded file on Gumroad (defaults to basename)'
+    required: false
+
+outputs:
+  file-url:
+    description: 'Canonical URL of the uploaded file on Gumroad'
+  upload-id:
+    description: 'Gumroad internal upload ID'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
