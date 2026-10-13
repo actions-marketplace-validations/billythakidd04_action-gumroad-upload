@@ -61,6 +61,13 @@ jobs:
             exit 1
           fi
 
+      - name: Synchronize Package Version
+        run: |
+          TAG="${{ steps.release_version.outputs.tag }}"
+          CLEAN_VERSION="${TAG#v}"
+          npm version "$CLEAN_VERSION" --no-git-tag-version --allow-same-version
+          echo "### 🏷️ Package Version Set: \`${CLEAN_VERSION}\`" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Build Distribution Bundle
         run: npm run build
 
