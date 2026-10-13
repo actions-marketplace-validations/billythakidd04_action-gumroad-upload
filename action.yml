@@ -1,6 +1,6 @@
 name: 'Gumroad File Upload'
 description: 'Upload release archives to Gumroad and attach them to products'
-author: 'Bill Caffery'
+author: '@billythakidd04'
 
 inputs:
   access-token:

@@ -16,7 +16,7 @@
     "release",
     "upload"
   ],
-  "author": "Bill Caffery",
+  "author": "@billythakidd04",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.11.1"
